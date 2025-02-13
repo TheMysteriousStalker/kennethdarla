@@ -8,8 +8,9 @@ function selectOption(option) {
         flashRainbowColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
             displayCatHeart(); // Display the cat-heart.gif
-            document.getElementById('answer').style.display = 'block'; // <-- This is the line that shows the answer
-            document.getElementById('answer').innerText = "I'll see you this weekend!";
+            var answerElement = document.getElementByID('answer');
+            answerElement.style.display = 'block';
+            answerElement.innerText = "I'll see you this weekend!";
         });
     } else if (option === 'no') {
         // Change text on the "No" button to "You sure?"
